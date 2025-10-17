@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "profile": {
+      "age": 28,
+      "location": "New York",
+      "designation": "Developer"
+    },
+    "activities": ["logged in", "updated profile", "uploaded document"]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "profile": {
+      "age": 32,
+      "location": "Los Angeles",
+      "designation": "Designer"
+    },
+    "activities": ["logged in", "viewed dashboard", "changed password"]
+  },
+  {
+    "id": 3,
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "profile": {
+      "age": 25,
+      "location": "Chicago",
+      "designation": "Content Writer"
+    },
+    "activities": ["logged in", "read notifications", "submitted report"]
+  },
+  {
+    "id": 4,
+    "name": "Bob Williams",
+    "email": "bob@example.com",
+    "profile": {
+      "age": 30,
+      "location": "San Francisco",
+      "designation": "Manager"
+    },
+    "activities": ["logged in", "approved request", "exported report"]
+  },
+  {
+    "id": 5,
+    "name": "Emma Brown",
+    "email": "emma@example.com",
+    "profile": {
+      "age": 27,
+      "location": "Seattle",
+      "designation": "QA Engineer"
+    },
+    "activities": ["logged in", "tested feature", "reported bug"]
+  }
+]
