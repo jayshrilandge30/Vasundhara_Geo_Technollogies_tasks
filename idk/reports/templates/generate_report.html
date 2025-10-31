@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Report</title>
+</head>
+<body>
+    <h1>Generate Report</h1>
+    <p>Click the button below to generate a user report.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Generate Report</button>
+    </form>
+
+    {% if report_link %}
+        <p>Report generated successfully!</p>
+        <a href="{{ report_link }}">Download Report</a>
+    {% endif %}
+</body>
+</html>
 
