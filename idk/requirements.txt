@@ -1,3 +1,42 @@
+###############################################
+# Django Report Generation Project - Requirements
+# Project: Vasundhara_Geo_Technollogies_tasks
+# Description:
+# - Generates reports (PDF)
+# - Uses Celery for background tasks
+# - Sends email notifications to users
+###############################################
+
+# ---- Core Framework ----
+Django>=4.2,<5.0
+
+# ---- Asynchronous Task Queue ----
+celery>=5.3
+redis>=5.0.1               # Celery broker backend (must have Redis running)
+
+# ---- Celery Django Integrations ----
+django-celery-results>=2.5.1
+django-celery-beat>=2.6.0
+
+# ---- PDF Report Generation ----
+reportlab>=4.0.6
+Pillow>=10.0.0             # Required by ReportLab for image handling
+
+# ---- Environment Variables ----
+django-environ>=0.11.2     # Manage .env configs safely
+
+# ---- Database Adapters ----
+# For PostgreSQL (default)
+psycopg2-binary>=2.9.9
+
+# If you use MySQL instead, comment out psycopg2-binary and uncomment below:
+# mysqlclient>=2.2.0
+
+# ---- Email Support (Optional) ----
+django-smtp-ssl>=1.0       # For secure SMTP connections
+
+# ---- Optional utilities ----
+requests>=2.31.0           # Useful for HTTP calls if needed
 
 Django>=4.2
 celery>=5.3
