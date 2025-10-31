@@ -1,14 +1,13 @@
-from django.shortcuts import render
+# reports/views.py
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .models import ReportRequest
+from .tasks import generate_user_report
 
-# Create your views here.
-from django.http import JsonResponse
-# from .tasks import generate_report_task
-from .tasks import generate_pdf_report_task
-
-
-
-def generate_report_view(request):
-    user_email = "testuser@example.com"  # hardcoded email for testing
-    generate_pdf_report_task.delay(user_email)
-    return JsonResponse({"message": "Report generation started. Check the Celery worker for the download link."})
-
+@login_required
+def generate_report(request):
+    if request.method == 'POST':
+        report = ReportRequest.objects.create(user=request.user)
+        generate_user_report.delay(report.id)
+        return render(request, 'reports/success.html', {'report': report})
+    return render(request, 'reports/generate_report.html')
