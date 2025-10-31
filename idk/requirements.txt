@@ -38,12 +38,3 @@ django-smtp-ssl>=1.0       # For secure SMTP connections
 # ---- Optional utilities ----
 requests>=2.31.0           # Useful for HTTP calls if needed
 
-Django>=4.2
-celery>=5.3
-redis>=5.0.1
-reportlab>=4.0.6
-django-celery-results>=2.5.1
-django-celery-beat>=2.6.0
-django-environ>=0.11.2
-psycopg2-binary>=2.9.9
-Pillow>=10.0.0
